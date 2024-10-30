@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Cricket Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1 id="title">Hand Cricket Game</h1>
+        <div id="tossSection" class="section">
+            <h2>Toss</h2>
+            <p>Choose Odd or Even:</p>
+            <div id="button-group">
+                <button onclick="chooseToss('odd')">Odd</button>
+                <button onclick="chooseToss('even')">Even</button>
+            </div>
+            <div id="tossInputSection" style="display:none;">
+                <input type="number" id="playerTossNumber" min="0" max="6" placeholder="Enter a number (0-6)">
+                <button onclick="performToss()">Toss!</button>
+            </div>
+            <div id="tossResult"></div>
+        </div>
+        <div id="choiceSection" class="section" style="display:none;">
+            <h2>Choose</h2>
+            <p>Do you want to bat or bowl first?</p>
+            <div id="button-group">
+                <button onclick="startGame('bat')">Bat</button>
+                <button onclick="startGame('bowl')">Bowl</button>
+            </div>
+        </div>
+        <div id="gameSection" class="section" style="display:none;">
+            <h2 id="result"></h2>
+            <div class="scores">
+                <div>Player Score: <span id="playerScore">0</span></div>
+                <div>AI Score: <span id="computerScore">0</span></div>
+                <div>Target Score: <span id="targetScore">-</span></div>
+            </div>
+            <div id="run-inputs">
+                <button onclick="play(0)">0</button>
+                <button onclick="play(1)">1</button>
+                <button onclick="play(2)">2</button>
+                <button onclick="play(3)">3</button>
+                <button onclick="play(4)">4</button>
+                <button onclick="play(5)">5</button>
+                <button onclick="play(6)">6</button>
+            </div>
+            <button onclick="newGame()" class="new-game-button">New Game</button>
+            <div id="playerWins">Player Wins: 0</div>
+            <div id="aiWins">AI Wins: 0</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
