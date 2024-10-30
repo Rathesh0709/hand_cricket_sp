@@ -103,3 +103,11 @@ button:hover {
         gap: 10px;
     }
 }
+#d {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#d p, #d a {
+    display: inline;
+}
