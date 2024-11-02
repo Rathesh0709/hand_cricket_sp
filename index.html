@@ -5,6 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hand Cricket Game</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        #container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        #button-group {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #6200ea;
+            color: white;
+            cursor: pointer;
+            flex: 1 1 100px; /* Allow buttons to grow */
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #3700b3;
+        }
+
+        .scores {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .new-game-button {
+            background-color: #ff5722;
+        }
+
+        .new-game-button:hover {
+            background-color: #e64a19;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            button {
+                flex: 1 1 100%; /* Full width buttons on mobile */
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="container">
@@ -37,7 +114,7 @@
                 <div>AI Score: <span id="computerScore">0</span></div>
                 <div>Target Score: <span id="targetScore">-</span></div>
             </div>
-            <div id="run-inputs">
+            <div id="run-inputs" style="text-align: center;">
                 <button onclick="play(0)">0</button>
                 <button onclick="play(1)">1</button>
                 <button onclick="play(2)">2</button>
